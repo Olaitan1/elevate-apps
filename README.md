@@ -44,7 +44,25 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+After starting the app successfully:
 
+# Register User
+using the postman http post request on :
+`localhost:3000/users`
+# Login User
+and login via:
+`localhost:3000/users/login`
+
+# Connect Websocket
+switch to the socket.io on postman and input URL:
+`localhost:3000?token=YOUR_JWT_TOKEN` for both publisher and subscriber
+
+# Fetch API
+the subscriber then sends command to fetch, update or create analytics from the ALPHA VANTAGE analytics API https://www.alphavantage.co
+
+the publisher part of the socket then fetches data from the API and sends back to the subscriber which can then be sent to the frontend
+
+Alpha Vantage provides realtime and historical financial market data through a set of powerful and developer-friendly data APIs and spreadsheets. From traditional asset classes (e.g., stocks, ETFs, mutual funds) to economic indicators, from foreign exchange rates to commodities, from fundamental data to technical indicators, Alpha Vantage is your one-stop-shop for enterprise-grade global market data delivered through cloud-based APIs, Excel, and Google Sheets.
 ## Test
 
 ```bash
